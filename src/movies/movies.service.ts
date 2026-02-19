@@ -8,7 +8,7 @@ export class MoviesService {
   constructor(
     @InjectRepository(Movie)
     private readonly movieRepo: Repository<Movie>,
-  ) {}
+  ) { }
 
   async listMovies(): Promise<Movie[]> {
     return this.movieRepo.find({ order: { id: 'ASC' } });
@@ -21,4 +21,5 @@ export class MoviesService {
   /*async listMovies(): Promise<Movie[]> {
     return 'hola' a s any;
   }*/
+  //hola
 }
